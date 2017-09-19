@@ -24,7 +24,7 @@ namespace OlaMundo
             /*
              * variavel que guarda a idade
              */
-            int idade = 17;
+            int idade = 16;
             double altura = 1.8;
             float peso = 95.5f;
             bool ehFumante = true;
@@ -42,6 +42,19 @@ namespace OlaMundo
                 MessageBox.Show("Não pode ainda!");
             }
 
+            for(int i = 0; i < 3; i++)
+            {
+                peso += 2;
+            }
+
+            MessageBox.Show("Peso: " + peso);
+
+            while (idade < 18)
+            {
+                MessageBox.Show("Nao pode");
+                idade++;
+            }
+                      
             // MessageBox.Show($"Preço da academia: {preco:C}");
         }
 
@@ -49,15 +62,8 @@ namespace OlaMundo
         {
             int valor = 15;
             string mensagem = "";
-            
-            if(valor > 10)
-            {
-                mensagem = "Maior que dez";
-            }
-            else
-            {
-                mensagem = "Menor que dez";
-            }
+
+            mensagem = valor > 10 ? "Maior que dez" : "Menor que dez";
 
             MessageBox.Show(mensagem);
         }
